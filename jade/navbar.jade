@@ -1,0 +1,22 @@
+.navbar.navbar-fixed-top
+    .navbar-inner
+      .container-fluid
+        a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-responsive-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.brand(href='/') dedmons
+        .nav-collapse.navbar-responsive-collapse.collapse
+          ul.nav
+            li.active
+              a(href='./') Home
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown') Assignments
+                b.caret
+              ul.dropdown-menu
+                li: a.pna(href='#') Assignment 1
+                li: a.pna(href='#') Assignment 2
+            li
+              a.pna(href='#') About
+            li
+              a.pna(href='#') Contact
