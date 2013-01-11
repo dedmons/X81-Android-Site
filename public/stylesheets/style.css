@@ -4,3 +4,7 @@ body {
 .brand {
   font-family: Courier;
 }
+
+.text-center{
+  text-align:center;<`2`>
+}

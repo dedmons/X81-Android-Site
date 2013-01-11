@@ -10,13 +10,13 @@
           ul.nav
             -var klass = ( typeof(home) === 'undefined' ? '':'active')
             li(class=klass)
-              a(href='./') Home
+              a(href='./index.html') Home
             li.dropdown
               a.dropdown-toggle(href='#', data-toggle='dropdown') Assignments
                 b.caret
               ul.dropdown-menu
                 -var klass = ( typeof(asn1) === 'undefined' ? '':'active')
-                li.active: a(href='./assignment1.html') Assignment 1
+                li: a(href='./assignment1.html') Assignment 1
                 -var klass = ( typeof(asn2) === 'undefined' ? '':'active')
                 li: a.pna(href='#') Assignment 2
             -var klass = ( typeof(about) === 'undefined' ? '':'active')

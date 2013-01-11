@@ -9,15 +9,16 @@ block content
       h1 Welcome
       p This site is for Clemsons CPSC X81 Android Development Course
     .row-fluid
-      .span3.well
-        ul.nav.nav-list
-          li.nav-header List Header 1
-          li.active: a(href='#') Part 1
-          li: a(href='#') Part 2
+      .span3
+        .well.sidebar-nav-affix-top
           ul.nav.nav-list
-            li.nav-header List 2 Header
-            li: a(href='#') Part B 1
-            li: a(href='#') Part B 2
+            li.nav-header List Header 1
+            li.active: a(href='#') Part 1
+            li: a(href='#') Part 2
+            ul.nav.nav-list
+              li.nav-header List 2 Header
+              li: a(href='#') Part B 1
+              li: a(href='#') Part B 2
       .span9
         p
           |Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
