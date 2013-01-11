@@ -6,6 +6,7 @@ $('.alert-close-btn').click(function(){
     $('#pageNotAvalible').slideUp();
 });
 
+
 $(window).scroll(function(){
     var offset = $('body').scrollTop();
     var elem = $('.sidebar-nav-affix-top');

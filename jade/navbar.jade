@@ -11,17 +11,18 @@
             -var klass = ( typeof(home) === 'undefined' ? '':'active')
             li(class=klass)
               a(href='./index.html') Home
-            li.dropdown
+            -var klass = (((typeof(asn1) !== 'undefined')||(typeof(asn2)!=='undefined'))?'active':'')    
+            li.dropdown(class=klass)
               a.dropdown-toggle(href='#', data-toggle='dropdown') Assignments
                 b.caret
               ul.dropdown-menu
                 -var klass = ( typeof(asn1) === 'undefined' ? '':'active')
-                li: a(href='./assignment1.html') Assignment 1
+                li(class=klass): a(href='./assignment1.html') Assignment 1
                 -var klass = ( typeof(asn2) === 'undefined' ? '':'active')
-                li: a.pna(href='#') Assignment 2
+                li(class=klass): a.pna(href='#') Assignment 2
             -var klass = ( typeof(about) === 'undefined' ? '':'active')
-            li
+            li(class=klass)
               a.pna(href='#') About
             -var klass = ( typeof(contact) === 'undefined' ? '':'active')
-            li
+            li(class=klass)
               a.pna(href='#') Contact
