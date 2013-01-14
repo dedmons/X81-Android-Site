@@ -6,20 +6,54 @@ block content
   include alerts
   .container-fluid
     .row-fluid
+      .span10.offset1
+        .hero-unit
+          h1 Assignment 0
+          p Hello World: My First Android App
+    .row-fluid
       .span2.offset1
         .well.sidebar-nav-affix-top
           ul.nav.nav-list
-            li.nav-header Assignment 1
+            li.nav-header Hello World
             li: a(href='#overview') Overview
             li: a(href='#pics') Screen Shots
             li: a(href='#ack') Acknowledgements
             li: a(href='#download') Download Links
       .span8
-        #overview
-        h3 Overview
-        #pics
-        h3 Screen Shots
-        #ack
-        h3 Acknowledgements
-        #download
-        h3 Download Links
+        #overview.in-page-link
+          h3 Overview
+          p
+            |This application is just a simple hello world app that adds
+            |2 extra TextViews and a Button. The added views get their text
+            |from the strings resource XML file. When launched the app sets
+            |the buttons action to a function that will start a Timer that 
+            |animates the TextViews to random parts of the screen and changes
+            |the buttons text. Then it
+            |sets the buttons action to a function that disables the timer,
+            |resets the TextViews, and resets the buttons text.
+        #pics.in-page-link
+          h3 Screen Shots
+          ul.thumbnails
+            li.span3
+              .thumbnail
+                img(src='./assets/asn0-ss1.png',width=212,height=350)
+            li.span3
+              .thumbnail
+                img(src='./assets/asn0-ss2.png',width=212,height=350)
+        #ack.in-page-link
+          h3 Acknowledgements
+          ul
+            li Android Developer site - used for class references
+            li StackOverflow - General questions during development.
+
+        #download.in-page-link
+          h3 Download Links
+          ul
+            li 
+              a(href='./assets/dedmons-asn0.tar.gz') Tarball Archive
+              p= "Open with "
+                code tar -xzvf dedmons-asn0.tar.gz
+                br
+                |This will expand to the directory dedmons-HelloWorld
+            li
+              a(href='./assets/dedmons-asn0.zip') Zip Archive
