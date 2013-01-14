@@ -1,12 +1,12 @@
 extends layout
 
 block content
-  asn1 = 1
+  asn0 = 1
   include navbar
   include alerts
-  .container
-    .row
-      .span2
+  .container-fluid
+    .row-fluid
+      .span2.offset1
         .well.sidebar-nav-affix-top
           ul.nav.nav-list
             li.nav-header Assignment 1
@@ -14,7 +14,7 @@ block content
             li: a(href='#pics') Screen Shots
             li: a(href='#ack') Acknowledgements
             li: a(href='#download') Download Links
-      .span10
+      .span8
         #overview
         h3 Overview
         #pics

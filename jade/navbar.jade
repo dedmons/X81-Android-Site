@@ -16,6 +16,8 @@
               a.dropdown-toggle(href='#', data-toggle='dropdown') Assignments
                 b.caret
               ul.dropdown-menu
+                -var klass = ( typeof(asn0) === 'undefined' ? '':'active')
+                li(class=klass): a(href='./assignment0.html') Assignment 0
                 -var klass = ( typeof(asn1) === 'undefined' ? '':'active')
                 li(class=klass): a(href='./assignment1.html') Assignment 1
                 -var klass = ( typeof(asn2) === 'undefined' ? '':'active')
