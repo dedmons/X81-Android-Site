@@ -4,22 +4,82 @@ block content
   asn1 = 1
   include navbar
   include alerts
-  .container
-    .row
-      .span2
+  .container-fluid
+    .row-fluid
+      .span10.offset1
+        .hero-unit
+          h1 Assignment 1
+          h2 SecureNote
+    .row-fluid
+      .span2.offset1
         .well.sidebar-nav-affix-top
           ul.nav.nav-list
-            li.nav-header Assignment 1
+            li.nav-header Hello World
             li: a(href='#overview') Overview
             li: a(href='#pics') Screen Shots
             li: a(href='#ack') Acknowledgements
             li: a(href='#download') Download Links
-      .span10
-        #overview
-        h3 Overview
-        #pics
-        h3 Screen Shots
-        #ack
-        h3 Acknowledgements
-        #download
-        h3 Download Links
+      .span8
+        #overview.in-page-link
+          h3 Overview
+          p
+            |This application is the start to a secure note taking
+            |and sharing platform. In this version the user creation,
+            |authentication, and note creation is implemented on top
+            |of an SQLite database. User passwords are secured using AES128
+            |encryption and encoded in Base64 for storage. The master key
+            |is derived from the devices unique id.
+          p
+            |The user registration screen puts the password through simple check
+            |and makes sure the confirmation is correct. The login screen gives
+            |error feedback based on your input and the data in the database.
+          p
+            |Notes are stored based on the user who creates them.
+        #pics.in-page-link
+          h3 Screen Shots
+          ul.thumbnails
+            li.span4
+              .thumbnail
+                img(src='./assets/asn1-ss1.png',width=212,height=350)
+              br
+              p
+                |Main login screen for the app. Provides access to
+                |register view, info view, and clearing buttons.
+              br
+              .thumbnail
+                img(src='./assets/asn1-ss3.png',width=212,height=350)
+              br
+              p
+                |Error on registration page if the passwords do not match.
+            li.span4
+              .thumbnail
+                img(src='./assets/asn1-ss2.png',width=212,height=350)
+              br
+              p
+                |Registration page: Allows new users to create a
+                |local account to create notes with.
+              br
+              .thumbnail
+                img(src='./assets/asn1-ss4.png',width=212,height=350)
+              br
+              p
+                |List of notes for a user and the add note button.
+        #ack.in-page-link
+          h3 Acknowledgements
+          ul
+            li Android Developer site - used for class references
+            li StackOverflow - General questions during development.
+            li Trent Vigar - Used his asn0 to start with SQLite.
+            li Google - Found information about crypto techniques.
+
+        #download.in-page-link
+          h3 Download Links
+          ul
+            li
+              a(href='./assets/dedmons.assignment1.tar.gz') Tarball Archive
+              p= "Open with "
+                code tar -xzvf dedmons.assignment1.tar.gz
+                br
+                |This will expand to the directory dedmons.assignment1
+            li
+              a(href='./assets/dedmons.assignment1.zip') Zip Archive
