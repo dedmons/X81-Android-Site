@@ -26,7 +26,7 @@ block content
             |This application is the start to a secure note taking
             |and sharing platform. In this version the user creation,
             |authentication, and note creation is implemented on top
-            |of an SQLite database. User passwords are secured using AES128
+            |of an SQLite database. User passwords are secured using AES512
             |encryption and encoded in Base64 for storage. The master key
             |is derived from the devices unique id.
           p
@@ -35,35 +35,47 @@ block content
             |error feedback based on your input and the data in the database.
           p
             |Notes are stored based on the user who creates them.
+          h4 New in version 2
+          p
+            |You can now edit the notes body. When you create a note you are taken
+            |to the edit screen, and when you tap on an entry in the list view you
+            |are taken to the edit view to edit the note.
+          p
+            |Also added Toast views to inform use to action happening in the application,
+            |and changed cryptogriphy scheme so old data will not work with the new version.
         #pics.in-page-link
           h3 Screen Shots
           ul.thumbnails
             li.span4
               .thumbnail
-                img(src='./assets/asn1-ss1.png',width=212,height=350)
+                img(src='./assets/asn2-ss1.png',width=212,height=350)
               br
               p
-                |Main login screen for the app. Provides access to
-                |register view, info view, and clearing buttons.
+                |Error alert view for when the username provided is not
+                |found in the database
+              br
               br
               .thumbnail
-                img(src='./assets/asn1-ss3.png',width=212,height=350)
+                img(src='./assets/asn2-ss3.png',width=212,height=350)
               br
               p
-                |Error on registration page if the passwords do not match.
+                |Error alert view when the password for the username is
+                |not correct
             li.span4
               .thumbnail
-                img(src='./assets/asn1-ss2.png',width=212,height=350)
+                img(src='./assets/asn2-ss2.png',width=212,height=350)
               br
               p
-                |Registration page: Allows new users to create a
-                |local account to create notes with.
-              br
+                |View when you create a new note. Title is filled in by default
+                |and the body is blank. It only adds an entry to the database
+                |if you save the note.
               .thumbnail
-                img(src='./assets/asn1-ss4.png',width=212,height=350)
+                img(src='./assets/asn2-ss4.png',width=212,height=350)
               br
               p
-                |List of notes for a user and the add note button.
+                |The view is filled in with the data from existing notes
+                |when you go to edit them. When you save, the database entry
+                |is updated.
         #ack.in-page-link
           h3 Acknowledgements
           ul
