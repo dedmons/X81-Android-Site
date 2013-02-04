@@ -18,6 +18,9 @@ block content
       .span8
         #ref.in-page-link
         h3 Reference Links
+        h4= "Filter out unexpectedvalue in logcat"
+        p
+          |Put this: ^(?!.*(nativeGetEnabledTags)).*$ in the filter field
         h4= "Google Mobile Courses - "
           a(href='http://goo.gl/F4HR2', target='_blank') Link
         p
