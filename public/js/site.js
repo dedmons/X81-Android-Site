@@ -7,7 +7,7 @@ $('.alert-close-btn').click(function(){
 });
 
 var trigerPoint = -1;
-
+/*
 $(window).scroll(function(){
     var pageOffset = $('body').scrollTop();
     var elem = $('.sidebar-nav-affix-top');
@@ -27,4 +27,4 @@ $(window).scroll(function(){
         elem.css('width','auto');
     }
 });
-
+*/

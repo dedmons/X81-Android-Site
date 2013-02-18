@@ -1,16 +1,32 @@
 body {
-  padding-top: 60px;
+    padding-top: 60px;
 }
 
 .brand {
-  font-family: Courier;
+    font-family: Courier;
 }
 
 .text-center{
-  text-align:center;
+    text-align:center;
 }
 
 .in-page-link{
-  padding-top:40px;
-  margin-top:-40px;
+    padding-top:40px;
+    margin-top:-40px;
 }
+
+.affix {
+    position: fixed;
+    top: 80px;
+    width: auto;
+}
+
+@media(min-width:1200px){
+    .sidenav{
+        width:150px;
+    }
+    .sidenav > li > a {
+        width:125px;
+    }
+}
+
