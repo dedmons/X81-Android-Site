@@ -1,15 +1,15 @@
 extends layout
 
 block content
-  asn2 = 1
+  asn3 = 1
   include navbar
   include alerts
   .container-fluid
     .row-fluid
       .span10.offset1
         .hero-unit
-          h1 Assignment 2
-          h2 SecureNote v0.2
+          h1 Assignment 3
+          h2 SecureNote v0.3
     .row-fluid
       .span2.offset1
         .well.sidebar-nav-affix-top
@@ -38,61 +38,59 @@ block content
             |error feedback based on your input and the data in the database.
           p
             |Notes are stored based on the user who creates them.
-          h4 New in version 2
+          h4 New in version 3
           p
-            |You can now edit the notes body. When you create a note you are taken
-            |to the edit screen, and when you tap on an entry in the list view you
-            |are taken to the edit view to edit the note.
+            |You can now share notes with other users on the device.
+            |Also you can delete notes and only the owner of the note can modify
+            |or delete a note.
           p
-            |Also added Toast views to inform use to action happening in the application,
-            |and changed cryptogriphy scheme so old data will not work with the new version.
+            |On the back end, some views were converted to fragments and the list view
+            |was updated to use a loader and custom list adapter.
         #pics.in-page-link
           h3 Screen Shots
           ul.thumbnails
             li.span4
               .thumbnail
-                img(src='./assets/asn2-ss1.png',width=212,height=350)
+                img(src='./assets/asn3-ss1.png',width=212,height=350)
               br
               p
-                |Error alert view for when the username provided is not
-                |found in the database
-              br
+                |New tab view for listing notes you can see. One tab
+                |for your notes and one tab for notes shared with you.
               br
               .thumbnail
-                img(src='./assets/asn2-ss3.png',width=212,height=350)
+                img(src='./assets/asn3-ss3.png',width=212,height=350)
               br
               p
-                |Error alert view when the password for the username is
-                |not correct
+                |Share menu for a note. Populated with all other users and checks
+                |users that the note is shared with.
             li.span4
               .thumbnail
-                img(src='./assets/asn2-ss2.png',width=212,height=350)
+                img(src='./assets/asn3-ss2.png',width=212,height=350)
               br
               p
-                |View when you create a new note. Title is filled in by default
-                |and the body is blank. It only adds an entry to the database
-                |if you save the note.
+                |New menu when editing notes. Lets you share or delete a note.
+              br
+              br
               .thumbnail
-                img(src='./assets/asn2-ss4.png',width=212,height=350)
+                img(src='./assets/asn3-ss4.png',width=212,height=350)
               br
               p
-                |The view is filled in with the data from existing notes
-                |when you go to edit them. When you save, the database entry
-                |is updated.
+                |Delete confirmation for note, just in case you don't actually want
+                |to delete the notes.
         #ack.in-page-link
           h3 Acknowledgements
           ul
-            li Android Developer site - used for class references and toast referance
+            li Trent Vigar - List fragments and loaders.
             li StackOverflow - General questions during development.
 
         #download.in-page-link
           h3 Download Links
           ul
             li
-              a(href='./assets/dedmons.assignment2.tar.gz') Tarball Archive
+              a(href='./assets/dedmons.assignment3.tar.gz') Tarball Archive
               p= "Open with "
-                code tar -xzvf dedmons.assignment2.tar.gz
+                code tar -xzvf dedmons.assignment3.tar.gz
                 br
-                |This will expand to the directory dedmons.secureNote
+                |This will expand to the directory dedmons.assignment3
             li
-              a(href='./assets/dedmons.assignment2.zip') Zip Archive
+              a(href='./assets/dedmons.assignment3.zip') Zip Archive
