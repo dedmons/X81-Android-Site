@@ -1,0 +1,96 @@
+extends layout
+
+block content
+  asn4 = 1
+  include navbar
+  include alerts
+  .container-fluid
+    .row-fluid
+      .span10.offset1
+        .hero-unit
+          h1 Assignment 4
+          h2 SecureNote v0.4
+    .row-fluid
+      .span2.offset1
+        .well.sidebar-nav-affix-top
+          ul.nav.nav-list
+            li.nav-header Sections
+            li: a(href='#overview') Overview
+            li: a(href='#pics') Screen Shots
+            li: a(href='#ack') Acknowledgements
+            li: a(href='#download') Download Links
+      .span8
+        #overview.in-page-link
+          p.text-warning
+            strong= "Warning: "
+            |This application uses api v17, will crash on lower api versions!
+          h3 Overview
+          p
+            |This application is the start to a secure note taking
+            |and sharing platform. In this version the user creation,
+            |authentication, and note creation is implemented on top
+            |of an SQLite database. User passwords are secured using AES512
+            |encryption and encoded in Base64 for storage. The master key
+            |is derived from the devices unique id.
+          p
+            |The user registration screen puts the password through simple check
+            |and makes sure the confirmation is correct. The login screen gives
+            |error feedback based on your input and the data in the database.
+          p
+            |Notes are stored based on the user who creates them.
+          h4 New in version 4
+          p
+            |User accounts are stored on a server and login in against that server.
+            |Also adds framework to intigrate other parts of the app with the web server.
+          p
+            |The server uses codeigniter to create a rest interface, and all communication
+            |is done via JSON and HTTP requests.
+        #pics.in-page-link
+          h3 Screen Shots
+          p No UI changes this time so screen shots are the same
+          ul.thumbnails
+            li.span4
+              .thumbnail
+                img(src='./assets/asn3-ss1.png',width=212,height=350)
+              br
+              p
+                |New tab view for listing notes you can see. One tab
+                |for your notes and one tab for notes shared with you.
+              br
+              .thumbnail
+                img(src='./assets/asn3-ss3.png',width=212,height=350)
+              br
+              p
+                |Share menu for a note. Populated with all other users and checks
+                |users that the note is shared with.
+            li.span4
+              .thumbnail
+                img(src='./assets/asn3-ss2.png',width=212,height=350)
+              br
+              p
+                |New menu when editing notes. Lets you share or delete a note.
+              br
+              br
+              .thumbnail
+                img(src='./assets/asn3-ss4.png',width=212,height=350)
+              br
+              p
+                |Delete confirmation for note, just in case you don't actually want
+                |to delete the notes.
+        #ack.in-page-link
+          h3 Acknowledgements
+          ul
+            li StackOverflow - General questions during development.
+            li Google - Infinite pool of knowledge.
+
+        #download.in-page-link
+          h3 Download Links
+          ul
+            li
+              a(href='./assets/dedmons.assignment4.tar.gz') Tarball Archive
+              p= "Open with "
+                code tar -xzvf dedmons.assignment4.tar.gz
+                br
+                |This will expand to the directory dedmons.securenotev4
+            li
+              a(href='./assets/dedmons.assignment4.zip') Zip Archive
